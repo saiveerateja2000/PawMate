@@ -1,0 +1,29 @@
+fastapi==0.101.0
+uvicorn[standard]==0.21.1
+SQLAlchemy==2.0.22
+psycopg2-binary==2.9.10
+pydantic==1.10.12
+alembic==1.11.1
+
+# OpenTelemetry - pinned for compatibility with instrumentation packages below
+opentelemetry-api==1.18.0
+opentelemetry-sdk==1.18.0
+opentelemetry-exporter-otlp==1.18.0
+opentelemetry-proto==1.18.0
+
+# Use a consistent instrumentation/semantic-conventions family compatible with SDK 1.18
+# (upgrade instrumentation to 0.39b0 so semantic-conventions aligns with the SDK)
+opentelemetry-instrumentation==0.39b0
+opentelemetry-instrumentation-fastapi==0.39b0
+
+# Ensure semantic conventions match the instrumentation/SDK family
+opentelemetry-semantic-conventions==0.39b0
+importlib-metadata==6.0.0
+wrapt==1.15.0
+protobuf==3.20.3
+
+python-json-logger==2.0.4
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+argon2-cffi==21.3.0
